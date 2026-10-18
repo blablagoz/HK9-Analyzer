@@ -156,8 +156,9 @@ public class MainActivity extends Activity implements BleClient.Listener {
         String[] labels={"Özet","Saatim","Kayıtlar","Ayarlar"},icons={"home","device","activity","settings"};
         for(int i=0;i<4;i++) {
             final int index=i;LinearLayout entry=column();entry.setGravity(Gravity.CENTER);entry.setPadding(0,dp(7),0,dp(7));if(i==tab) entry.setBackground(shape(Color.rgb(29,44,37),18));
-            entry.addView(new Icon(icons[i],i==tab?MINT:MUTED),new LinearLayout.LayoutParams(dp(22),dp(22)));gap(entry,6);entry.addView(text(labels[i],11,i==tab?MINT:MUTED));
-            entry.setContentDescription(labels[i]);entry.setFocusable(true);entry.setOnClickListener(v -> selectTab(index));nav.addView(entry,new LinearLayout.LayoutParams(0,-2,1));
+            entry.addView(new Icon(icons[i],i==tab?MINT:MUTED),new LinearLayout.LayoutParams(dp(22),dp(22)));gap(entry,6);
+            TextView label=text(labels[i],11,i==tab?MINT:MUTED);label.setGravity(Gravity.CENTER);entry.addView(label);
+            entry.setSelected(i==tab);entry.setContentDescription(labels[i]);entry.setFocusable(true);entry.setOnClickListener(v -> selectTab(index));nav.addView(entry,new LinearLayout.LayoutParams(0,-2,1));
         }root.addView(nav,new LinearLayout.LayoutParams(-1,-2));
     }
     private void selectTab(int index) { tab=index;render(); }
