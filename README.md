@@ -16,7 +16,7 @@ Bluetooth'u açın, izinleri verin ve **Tara** düğmesine dokunun. Android 8–
 
 Bu ilk sürüm standart BLE keşif ve okuma araçları sunar. Wearfit Pro'nun özel komutları, sağlık verisi çözümleme, bildirim aboneliği ve firmware işlemleri henüz uygulanmadı. Gerçek HK9 Pro üzerinde donanım testi gereklidir. Günlükler cihaz adresleri ve ham veriler içerebilir; paylaşmadan önce inceleyin. Uygulama günlükleri sunucuya göndermez.
 
-Önceki sohbetin proje arşivine erişilemediğinden bu kaynaklar yeni oluşturulmuştur.
+Bu depodaki kök Android projesi yeni oluşturulmuştur ve GitHub Actions ile APK derlemesi doğrulanmıştır. Sonraki dosya kontrolünde bulunan önceki Kotlin projesi, değiştirilmeden `HK9Analyzer-original-source.zip` adıyla korunmuştur. Arşivdeki sürüm JSON dışa aktarma ve sıralı GATT okuma içerir; kökteki yeni sürüm karakteristikleri elle okuma ve günlük paylaşımı sunar. Bunlar ayrı kaynak sürümleridir. Önceki arşivin kendi derlemesi henüz doğrulanmamıştır.
 
 ## APK
 
